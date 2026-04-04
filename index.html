@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="עגלת הקפה עמנואל, עגלת קפה בוטיק במושב ישע. מקום קטן וקסום לאוכל ולב. קפה, סלטים, כריכים ויין בערב.">
+    <title>עמנואל קפה | Emanuel Cafe</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet for Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="smooth-scroll">
+
+    <!-- Social Sidebar -->
+    <div class="social-sidebar">
+        <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    </div>
+
+    <!-- Accessibility Widget -->
+    <div class="acc-widget" id="accWidget">
+        <button class="acc-toggle" id="accToggle" aria-label="Toggle Accessibility Menu">
+            <i class="fa-solid fa-universal-access"></i>
+        </button>
+        <div class="acc-menu" id="accMenu">
+            <button id="accContrast">היפוך צבעים</button>
+            <button id="accTextPlus">הגדל טקסט A+</button>
+            <button id="accTextMinus">הקטן טקסט A-</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#hero" class="logo"><img src="logo.jpg" alt="עמנואל קפה"></a>
+            <nav class="nav">
+                <a href="#hero">בית</a>
+                <a href="#about">עלינו</a>
+                <a href="#gallery">גלריה</a>
+                <a href="#info">מידע והגעה</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg bg-1"></div>
+        <div class="hero-bg bg-2"></div>
+        <div class="hero-bg bg-3"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in">
+            <h1 class="main-heading">עמנואל קפה</h1>
+            <a href="#info" class="cta-btn">בואו אלינו</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-flex">
+            <div class="about-image fade-in left-reveal">
+                <img src="story.jpg" alt="הסיפור של עמנואל קפה - נעמה שפירא">
+            </div>
+            <div class="about-text fade-in right-reveal">
+                <h2>הסיפור שלנו</h2>
+                <p>שמי נעמה שפירא, בת 24, והקמתי את עגלת הקפה "עמנואל" מתוך אהבה גדולה לעולם האוכל ורצון להגשים חלום אישי.</p>
+                <p>העגלה נקראת על שמו האמצעי של אבא שלי, גל עמנואל שפירא ז״ל, והיא עבורי הרבה יותר מעסק, היא מקום עם משמעות, זיכרון וחיבור עמוק למשפחה.</p>
+                <p>מאז ומתמיד נמשכתי לעולם האוכל, ובשלב מסוים הבנתי שאני רוצה להפוך את זה למשהו אמיתי, מקום שאנשים מגיעים אליו לא רק בשביל לאכול, אלא בשביל להרגיש.</p>
+                <p>עגלת הקפה ממוקמת בקצה המשק המשפחתי, מוקפת בגינה מטופחת, ובדיוק ככה דמיינתי אותה, מקום קטן, נעים ומזמין, כזה שמרגיש קצת כמו בית.</p>
+                <p>בתפריט תמצאו סלטים טריים, שרובם מבוססים על ירקות מחקלאים מקומיים, לצד כריכים מיוחדים שאני מרכיבה תוך הקפדה על חומרי גלם איכותיים.</p>
+                <p>בשעות הערב האווירה משתנה, והעגלה הופכת למקום אינטימי יותר עם יין וגבינות, ממש כמו בית קפה קטן ושקט.</p>
+                <p class="highlight">בסופו של דבר, כל מה שחשוב לי זה שתגיעו, תשבו רגע, ותיהנו. 💛</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container fade-in">
+            <h2 class="section-title">גלריה</h2>
+            <div class="carousel-wrapper" dir="ltr">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Set 1 -->
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.56 (1).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.56.jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.57 (1).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.57 (2).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.57.jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.58 (1).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.58 (2).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.58.jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.59 (1).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.59 (2).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.59.jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.18.00.jpeg" alt="גלריה"></div>
+                    
+                    <!-- Set 2 (for infinite scrolling loop) -->
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.56 (1).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.56.jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.57 (1).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.57 (2).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.57.jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.58 (1).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.58 (2).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.58.jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.59 (1).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.59 (2).jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.17.59.jpeg" alt="גלריה"></div>
+                    <div class="carousel-slide"><img src="gallery/WhatsApp Image 2026-04-04 at 13.18.00.jpeg" alt="גלריה"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-hub" id="info">
+        <div class="container fade-in">
+            <div class="info-flex">
+                <div class="info-details">
+                    <h2 class="section-title">כאן בשבילכם</h2>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-location-dot"></i> <a href="https://maps.app.goo.gl/VhUvnZVkmADhLop16?g_st=ic" target="_blank">מושב ישע (נווטו אלינו)</a></li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:0503177579">050-317-7579</a></li>
+                        <li class="hours-block">
+                            <i class="fa-regular fa-clock"></i> 
+                            <div class="hours-text">
+                                <span>ראשון - חמישי: 8:00-18:00</span>
+                                <span>שישי: 8:00-14:00</span>
+                                <span>שבת: סגור</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="map-container fade-in">
+                    <div id="map"></div>
+                </div>
+            </div>
+            
+            <p class="greeting bottom-closing">מחכים לראותכם בין הגינה והשקט.</p>
+        </div>
+    </section>
+
+    <!-- Sticky Footer CTA -->
+    <div class="sticky-footer">
+        <a href="https://maps.app.goo.gl/VhUvnZVkmADhLop16?g_st=ic" target="_blank" class="footer-cta"><i class="fa-solid fa-location-dot"></i> בואו אלינו</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
