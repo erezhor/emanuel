@@ -92,30 +92,4 @@ const fadeObserver = new IntersectionObserver((entries, observer) => {
 
 fadeElements.forEach(el => fadeObserver.observe(el));
 
-// Leaflet Map Initialization
-// Location around Moshav Yesha
-// https://maps.app.goo.gl/VhUvnZVkmADhLop16?g_st=ic -> approx: 31.2291, 34.3789
-document.addEventListener('DOMContentLoaded', () => {
-    if(document.getElementById('map')) {
-        const map = L.map('map').setView([31.2291, 34.3789], 14); // Coordinates for Yesha area
-        
-        // Custom Styled Map (using a warm beige/light tone map if possible, but we'll use CartoDB Positron for a light, clean look)
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
-            subdomains: 'abcd',
-            maxZoom: 20
-        }).addTo(map);
 
-        // Custom Marker
-        const customIcon = L.icon({
-            iconUrl: 'https://cdn-icons-png.flaticon.com/512/2838/2838912.png',
-            iconSize: [40, 40],
-            iconAnchor: [20, 40]
-        });
-
-        L.marker([31.2291, 34.3789], {icon: customIcon})
-         .addTo(map)
-         .bindPopup('<b>עמנואל קפה</b><br>מושב ישע')
-         .openPopup();
-    }
-});
