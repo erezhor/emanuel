@@ -11,17 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Leaflet for Map -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="smooth-scroll">
 
     <!-- Social Sidebar -->
     <div class="social-sidebar">
-        <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/emanuel__coffee?igsh=N3pmdmI5NTRlY2J0&utm_source=qr" target="_blank" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/18dBhd7xUy/?mibextid=wwXIfr" target="_blank" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
     </div>
 
     <!-- Accessibility Widget -->
@@ -56,8 +53,8 @@
         <div class="hero-bg bg-3"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content fade-in">
-            <h1 class="main-heading">עמנואל קפה</h1>
-            <a href="#info" class="cta-btn">בואו אלינו</a>
+            <h1 class="main-heading">עמנואל</h1>
+            <p class="hero-subtitle">קפה • אווירה • אהבה</p>
         </div>
     </section>
 
@@ -69,13 +66,11 @@
             </div>
             <div class="about-text fade-in right-reveal">
                 <h2>הסיפור שלנו</h2>
-                <p>שמי נעמה שפירא, בת 24, והקמתי את עגלת הקפה "עמנואל" מתוך אהבה גדולה לעולם האוכל ורצון להגשים חלום אישי.</p>
-                <p>העגלה נקראת על שמו האמצעי של אבא שלי, גל עמנואל שפירא ז״ל, והיא עבורי הרבה יותר מעסק, היא מקום עם משמעות, זיכרון וחיבור עמוק למשפחה.</p>
-                <p>מאז ומתמיד נמשכתי לעולם האוכל, ובשלב מסוים הבנתי שאני רוצה להפוך את זה למשהו אמיתי, מקום שאנשים מגיעים אליו לא רק בשביל לאכול, אלא בשביל להרגיש.</p>
-                <p>עגלת הקפה ממוקמת בקצה המשק המשפחתי, מוקפת בגינה מטופחת, ובדיוק ככה דמיינתי אותה, מקום קטן, נעים ומזמין, כזה שמרגיש קצת כמו בית.</p>
-                <p>בתפריט תמצאו סלטים טריים, שרובם מבוססים על ירקות מחקלאים מקומיים, לצד כריכים מיוחדים שאני מרכיבה תוך הקפדה על חומרי גלם איכותיים.</p>
-                <p>בשעות הערב האווירה משתנה, והעגלה הופכת למקום אינטימי יותר עם יין וגבינות, ממש כמו בית קפה קטן ושקט.</p>
-                <p class="highlight">בסופו של דבר, כל מה שחשוב לי זה שתגיעו, תשבו רגע, ותיהנו. 💛</p>
+                <p>היי אני נעמה בת 25 ילידת המקום, פתחתי את עגלת הקפה עמנואל במושב ישע במרץ 2023.</p>
+                <p>שם העגלה נבחר לזכר אבא שלי גל עמנואל שפירא ז״ל.</p>
+                <p>פתחתי את המקום בעקבות רצון להישאר ולהשתקע באיזור, לייצר מקום התקהלות ומפגש חברתי, יחד עם אוכל טוב ואווירה קסומה ורגועה.</p>
+                <p>המקום באווירה משפחתית, עם הרבה ירוק בעיניים 🤍</p>
+                <p class="highlight">עמנואל - קפה • אווירה • אהבה</p>
             </div>
         </div>
     </section>
@@ -129,15 +124,27 @@
                         <li class="hours-block">
                             <i class="fa-regular fa-clock"></i> 
                             <div class="hours-text">
-                                <span>ראשון - חמישי: 8:00-18:00</span>
-                                <span>שישי: 8:00-14:00</span>
+                                <span>ראשון: 08:00-14:00, 18:30-20:30</span>
+                                <span>שני: 08:00-14:00, 18:30-20:30</span>
+                                <span>שלישי: 08:00-14:00</span>
+                                <span>רביעי: 08:00-14:00, 18:30-20:30</span>
+                                <span>חמישי: 08:00-14:00</span>
+                                <span>שישי: 08:30-15:00</span>
                                 <span>שבת: סגור</span>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="map-container fade-in">
-                    <div id="map"></div>
+                    <iframe 
+                        src="https://maps.google.com/maps?q=%D7%A2%D7%9E%D7%A0%D7%95%D7%90%D7%9C%20%D7%A2%D7%92%D7%9C%D7%AA%20%D7%A7%D7%A4%D7%94%20%D7%9E%D7%95%D7%A9%D7%91%20%D7%99%D7%A9%D7%A2&t=m&z=16&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
             
@@ -151,7 +158,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
