@@ -133,6 +133,10 @@ ul {
     cursor: pointer;
 }
 
+.menu-close-btn {
+    display: none; /* Hidden strictly on desktop */
+}
+
 .header-container {
     flex-direction: row-reverse;
     padding-right: 0.5rem; /* Push menu further to the right */
@@ -625,7 +629,11 @@ ul {
         text-align: center;
         z-index: 9998;
     }
+    .nav.active {
+        display: flex !important; /* Override none logic cleanly */
+    }
     .menu-close-btn {
+        display: block; /* Reveal exclusively on mobile dropdown */
         position: absolute;
         top: 15px;
         left: 25px; /* Safely floating on the left side of the menu panel */
@@ -636,9 +644,6 @@ ul {
         cursor: pointer;
         outline: none;
         z-index: 9999;
-    }
-    .nav.active {
-        display: flex !important; /* Override none logic cleanly */
     }
     .nav a {
         font-size: 1.5rem; 
@@ -666,39 +671,57 @@ ul {
         letter-spacing: 1px;
     }
 
-    /* Column Stacking & Centering */
-    .about-flex, .info-flex { 
+    /* Column Stacking & Centering (About) */
+    .about-flex { 
+        display: flex;
         flex-direction: column; 
         text-align: center; 
-        gap: 2.5rem; /* Tighter gap on mobile */
+        gap: 2.5rem; 
     }
     .about-text h2, .section-title {
         font-size: 2.8rem;
     }
     .about, .gallery, .info-hub {
-        padding: 40px 0; /* Shrink padding on smaller screens */
+        padding: 40px 0; 
     }
     .about-image img {
         height: auto;
-        max-height: 380px; /* Compress the height visually */
+        max-height: 380px; 
     }
 
-    /* Contact Details Formatting */
+    /* Contact Details Formatting & Reordering */
+    .info-flex { 
+        display: flex;
+        flex-direction: column; 
+        text-align: center; 
+        gap: 2.5rem; 
+    }
+    
+    .info-details, .contact-list {
+        display: contents !important; /* Unwrap these divs for flex sorting */
+    }
+    
+    .contact-list li:nth-child(1) { order: 1; } /* Location Text */
+    .map-container                { order: 2; margin-top: 0; margin-bottom: 0; } /* Map */
+    .contact-list li:nth-child(2) { order: 3; } /* Phone */
+    .contact-list li:nth-child(3) { order: 4; } /* Hours */
+    
     .contact-list li { 
-        flex-direction: column; /* Stack icons above text to lock centering */
+        display: flex;
+        flex-direction: column; 
         justify-content: center; 
         gap: 0.5rem;
         font-size: 1.2rem;
         text-align: center;
     }
     .hours-block {
-        align-items: center !important; /* Forces the hours clock to center dynamically */
+        align-items: center !important; 
     }
     .hours-block i {
         margin-top: 0;
     }
     .hours-text {
-        align-items: center; /* Center schedule text */
+        align-items: center; 
     }
     .bottom-closing {
         font-size: 2.2rem;
@@ -711,9 +734,20 @@ ul {
         width: 100%;
         border-radius: 12px;
     }
+
     .social-sidebar { 
-        display: none; 
-    } /* Purged to save heavy screen space */
+        display: flex; 
+        left: 15px;
+        bottom: 15px;
+        flex-direction: column;
+        gap: 0.8rem;
+    } 
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem; /* Scaled perfectly to match the acc-toggle */
+    }
+    
     .sticky-footer .footer-cta {
         padding: 0.8rem 2.5rem;
         font-size: 1.1rem;
