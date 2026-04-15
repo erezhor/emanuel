@@ -124,7 +124,7 @@ ul {
     transform: translateZ(0); /* Hardware acceleration for crisp rendering */
 }
 
-.hamburger-menu {
+.mobile-menu-trigger {
     display: none;
     background: none;
     border: none;
@@ -582,7 +582,7 @@ ul {
         height: 55px; 
         width: 55px;
     }
-    .hamburger-menu {
+    .mobile-menu-trigger {
         display: flex !important; /* Expose icon natively */
         align-items: center;
         justify-content: center;
@@ -606,10 +606,22 @@ ul {
         position: absolute;
         top: 80px; /* Strict height measurement drop */
         left: 0;
-        padding: 1.5rem 0;
+        padding: 2.5rem 0 1.5rem 0; /* Extra top padding for the X button to breathe */
         box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         text-align: center;
         z-index: 9998;
+    }
+    .menu-close-btn {
+        position: absolute;
+        top: 15px;
+        left: 25px; /* Safely floating on the left side of the menu panel */
+        background: transparent;
+        border: none;
+        font-size: 2.5rem;
+        color: var(--text-main);
+        cursor: pointer;
+        outline: none;
+        z-index: 9999;
     }
     .nav.active {
         display: flex !important; /* Override none logic cleanly */
