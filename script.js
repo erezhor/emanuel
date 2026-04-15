@@ -1,3 +1,20 @@
+// Mobile Hamburger Navigation
+const hamburgerMenu = document.getElementById('hamburgerMenu');
+const navMenu = document.getElementById('navMenu');
+
+if (hamburgerMenu && navMenu) {
+    hamburgerMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    // Close menu when tapping a link (important for single page apps/anchors)
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+}
+
 // Accessibility Widget
 const accToggle = document.getElementById('accToggle');
 const accMenu = document.getElementById('accMenu');
