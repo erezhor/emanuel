@@ -570,19 +570,32 @@ ul {
         z-index: 9999;
     }
     .header-container { 
-        display: flex;
-        flex-direction: row-reverse !important; /* Force Logo Left, Ham Right */
-        justify-content: space-between !important;
-        align-items: center;
-        padding: 0 1.5rem;
+        display: block !important;
+        position: relative;
         height: 100%;
         width: 100%;
+        padding: 0;
     }
-    .logo img {
+    /* Explicit DOM Targeting + Absolute Positioning to guarantee structure */
+    .header .header-container .logo {
+        position: absolute;
+        left: 20px; /* Far Left */
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    .header .header-container .logo img {
         height: 55px; 
         width: 55px;
+        display: block;
     }
-    .mobile-menu-trigger {
+    .header .header-container .mobile-menu-trigger {
+        position: absolute;
+        right: 20px; /* Far Right */
+        top: 50%;
+        transform: translateY(-50%);
         display: flex !important; /* Expose icon natively */
         align-items: center;
         justify-content: center;
@@ -596,6 +609,7 @@ ul {
         z-index: 10000;
         cursor: pointer;
         padding: 0;
+        margin: 0;
     }
     
     .nav {
