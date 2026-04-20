@@ -432,7 +432,22 @@ ul {
     filter: sepia(0.8) hue-rotate(-15deg) saturate(1.2) contrast(0.9) brightness(1.05);
 }
 
-/* Sticky Elements & Footer Socials */
+.contact-list a:hover {
+    opacity: 0.8;
+}
+
+/* Site Footer */
+.site-footer {
+    text-align: center;
+    padding: 1rem 1rem;
+    background-color: var(--bg-dark); /* Match Info Hub bg securely */
+    color: var(--text-main);
+    font-size: 1.1rem;
+    padding-bottom: 90px; /* Guarantee the Sticky CTA won't cover up the text visually */
+    border-top: 1px solid rgba(0,0,0,0.05); /* Elegantly detached from regular info content */
+}
+
+/* Float & Sticky Elements */
 .social-sidebar {
     position: fixed;
     bottom: 30px;
@@ -690,11 +705,14 @@ ul {
     }
 
     /* Contact Details Formatting & Reordering */
+    .info-hub .section-title {
+        margin-bottom: 1rem; /* Pull Contact elements closer to the title on mobile */
+    }
     .info-flex { 
         display: flex;
         flex-direction: column; 
         text-align: center; 
-        gap: 2.5rem; 
+        gap: 1.2rem; /* Tighten gaps between location, phone, and hours */
     }
     
     .info-details, .contact-list {
