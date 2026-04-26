@@ -11,7 +11,7 @@
     --accent-hover: #5B3E31; /* Deep Coffee */
     --nav-height: 80px;
     --font-heading: 'Amatic SC', cursive;
-    --font-body: 'Assistant', sans-serif;
+    --font-body: 'Rubik', sans-serif;
     --round-soft: 2rem;
     --round-max: 50vw;
 }
@@ -674,8 +674,8 @@ ul {
         height: 85vh; /* Free up some scrolling height natively */
     }
     .hero-content { 
-        padding: 2rem 1.5rem; 
-        width: 90%; 
+        padding: 1.5rem 1rem; 
+        width: 80%; 
     }
     .main-heading { 
         font-size: 3.2rem; 
